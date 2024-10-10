@@ -16,7 +16,7 @@ main {
 
 header {
   grid-area: header2;
-  background-color:pink;
+  background-color:rgb(255, 0, 43);
   padding: 1.2em;
 }
 
