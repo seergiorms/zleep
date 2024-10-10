@@ -1,0 +1,96 @@
+main {
+  display: grid;
+  height: 150rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.05fr 0.3fr 0.3fr 0.15fr 0.15fr 0.1fr;
+  grid-template-areas: 
+    "header2 nav2 nav2 " 
+    "section2 section2 section2" 
+    "aside2 section3 section3"
+    "section4 section4 section4"
+    "section5 section5 section5"
+    "footer2 footer2 footer2"; 
+   /* grid-template-areas: "footer2 footer2 footer2" "section2 section2 aside2" "header2 nav2 nav2"; */
+  /* haz otras distribuciones */
+}
+
+header {
+  grid-area: header2;
+  background-color:pink;
+  padding: 1.2em;
+}
+
+#logo{
+	max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 1.2em;
+  grid-area: nav2;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: end;
+}
+
+.caja {
+  width: 6em;
+  height: 2em;
+  margin: 0.5em;
+  padding: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#section3{
+  grid-area: section3;
+  background: rgb(106, 106, 106);
+}
+
+#section4{
+  grid-area: section4;
+  background: rgb(90, 222, 255);
+}
+
+#section2{
+  grid-area: section2;
+  background: rgb(0, 0, 0);
+  color:aliceblue;
+}
+
+#section5{
+  grid-area: section5;
+  background: rgb(30, 13, 72);
+  color:aliceblue;
+}
+
+aside {
+  grid-area: aside2;
+  background: purple;
+  color: white;
+}
+
+footer {
+  grid-area: footer2;
+  background: palevioletred;
+  color: white;
+  grid-column: span 3;
+  /*ocupa 2  columnas desde cualquier sitio que empieces */
+  /* también 1/3 */
+}
