@@ -40,7 +40,10 @@ nav {
   grid-area: nav2;
 }
 
+
 .contenedor { 
+  height: 100%;
+  padding-bottom: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
