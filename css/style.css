@@ -1,13 +1,15 @@
 main {
   background-color: #F2F0E9;
   display: grid;
-  height: 150rem;
+  height: 220rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.05fr 0.3fr 0.3fr 0.15fr 0.15fr 0.1fr;
+  grid-template-rows: 0.05fr 0.18fr 0.1fr 0.1fr 0.1fr 0.15fr 0.2fr auto;
   grid-template-areas: 
     "header2 nav2 nav2 " 
     "section2 section2 section2" 
     "aside2 section3 section3"
+    "aside2 section31 section31"
+    "aside2 section32 section32"
     "section4 section4 section4"
     "section5 section5 section5"
     "footer2 footer2 footer2"; 
@@ -74,9 +76,31 @@ ul li {
   list-style-type: none;
 }
 
+#section2{
+  grid-area: section2;
+  margin-bottom: 1em;
+}
+
+.carousel{
+  height: 100%;
+  width: 100%;
+}
+
+.bd-placeholder-img{
+  height: 50px;
+}
+
 #section3{
   grid-area: section3;
-  background: rgb(106, 106, 106);
+  
+}
+
+#section31{
+  grid-area: section31;
+}
+
+#section32{
+  grid-area: section32;
 }
 
 #section4{
@@ -84,9 +108,7 @@ ul li {
   background: rgb(90, 222, 255);
 }
 
-#section2{
-  grid-area: section2;
-}
+
 
 #section5{
   grid-area: section5;
