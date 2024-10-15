@@ -3,7 +3,7 @@ main {
   display: grid;
   height: 220rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.05fr 0.18fr 0.1fr 0.1fr 0.1fr 0.15fr 0.2fr auto;
+  grid-template-rows: 0.05fr 0.18fr 0.1fr 0.1fr 0.1fr 0.15fr 0.25fr auto;
   grid-template-areas: 
     "header2 nav2 nav2 " 
     "section2 section2 section2" 
@@ -112,19 +112,19 @@ ul li {
 
 #section5{
   grid-area: section5;
-  background: rgb(30, 13, 72);
+  background: rgb(90, 49, 193);
   color:aliceblue;
 }
 
 aside {
   grid-area: aside2;
-  background: purple;
-  color: white;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 footer {
   grid-area: footer2;
-  background: palevioletred;
+  background: rgb(9, 27, 64);
   color: white;
   grid-column: span 3;
   /*ocupa 2  columnas desde cualquier sitio que empieces */
