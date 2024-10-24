@@ -1,15 +1,12 @@
 main {
-  background-color: #F2F0E9;
   display: grid;
-  height: 220rem;
+  height: 150rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.05fr 0.18fr 0.1fr 0.1fr 0.1fr 0.15fr 0.25fr auto;
+  grid-template-rows: 0.05fr 0.3fr 0.3fr 0.15fr 0.15fr 0.1fr;
   grid-template-areas: 
-    "header2 nav2 nav2 " 
+    "header2 nav2 nav2" 
     "section2 section2 section2" 
     "aside2 section3 section3"
-    "aside2 section31 section31"
-    "aside2 section32 section32"
     "section4 section4 section4"
     "section5 section5 section5"
     "footer2 footer2 footer2"; 
@@ -46,7 +43,7 @@ nav {
 
 .contenedor { 
   height: 100%;
-  padding-bottom: 1.35em;
+  padding-bottom: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -57,7 +54,7 @@ nav {
 .caja {
   width: fit-content;
   height: flex;
-  padding: 0 0 0 2em;
+  padding: 0em 0.5em;
   font-size: 2em;
   text-align: center;
   font-style: bold;
@@ -76,55 +73,223 @@ ul li {
   list-style-type: none;
 }
 
-#section2{
-  grid-area: section2;
-  margin-bottom: 1em;
-}
-
-.carousel{
-  height: 100%;
-  width: 100%;
-}
-
-.bd-placeholder-img{
-  height: 50px;
-}
-
 #section3{
   grid-area: section3;
-  
-}
-
-#section31{
-  grid-area: section31;
-}
-
-#section32{
-  grid-area: section32;
+  background: rgb(106, 106, 106);
 }
 
 #section4{
   grid-area: section4;
-  background: rgb(90, 222, 255);
+  background: #101c44;
 }
 
+/* productos */
 
+.heading-2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  color: white;
+}
+
+.container-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3rem;
+  padding: 5rem 5rem;
+}
+
+.card-product {
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.container-img {
+  position: relative;
+}
+
+.container-img img {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.container-img .discount {
+  position: absolute;
+  left: 0;
+  background-color: #B8B8D1;
+  color: white;
+  padding: 2px 1.2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  right: -3rem;
+  z-index: -1;
+  transition: all .4s ease;
+}
+
+.button-group span {
+  border: 1px solid #226CE0;
+  padding: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.button-group span:hover {
+  background-color: #226CE0;
+}
+
+.button-group span i {
+  font-size: 1.5rem;
+  color: #226CE0;
+}
+
+.button-group span:hover i {
+  color: white;
+}
+
+.card-product:hover .button-group{
+  z-index: 0;
+  right: -1rem;
+}
+
+.content-card-product {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, min-content);
+  row-gap: 1rem;
+}
+
+.stars {
+  grid-row: 1/2;
+  grid-column: 1/-1;
+}
+
+.stars i {
+  font-size: 1.3rem;
+  color: #226CE0;
+}
+
+.content-card-product h3 {
+  font-family: "Helvetica";
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.content-card-product h3:hover {
+  color: #226CE0;
+}
+
+.add-cart {
+  justify-self: start;
+  border: 2px solid #226CE0;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .4s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-cart:hover {
+  background-color: #226CE0;
+}
+
+.add-cart i {
+  font-size: 1.5rem;
+  color: #226CE0;
+}
+
+.add-cart:hover i {
+  color: white;
+}
+
+.content-card-product .price {
+  justify-self: end;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.content-card-product .price span {
+  justify-self: end;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #777;
+  margin-left: 0.5rem;
+}
+
+/* fin productos */
+
+#section2{
+  grid-area: section2;
+  height: 100%;
+}
 
 #section5{
   grid-area: section5;
-  background: rgb(90, 49, 193);
-  color:aliceblue;
+  background: white;
+}
+
+#section5 h2 {
+  font-weight: 700;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  color: #101c44;
 }
 
 aside {
   grid-area: aside2;
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background: white;
+  color: #101c44;
+  padding: 2rem;
+}
+
+aside p {
+  color: #101c44;
+  justify-content: center;
+}
+
+aside h2 {
+  font-weight: 700;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+#section5 {
+  padding: 2rem;
+}
+
+.container-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3rem;
+  padding: 5rem 5rem;
 }
 
 footer {
   grid-area: footer2;
-  background: rgb(9, 27, 64);
+  background: palevioletred;
   color: white;
   grid-column: span 3;
   /*ocupa 2  columnas desde cualquier sitio que empieces */
