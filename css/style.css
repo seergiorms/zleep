@@ -77,10 +77,11 @@ ul li {
 
 .carousel-inner{
   max-height: 39rem;
+  display: flex;
 }
 
-.carousel-inner img{
-  object-fit: contain;
+.carousel-item{
+  display: flex;
 }
 
 #section3{
@@ -132,6 +133,10 @@ ul li {
   padding: 2rem 3rem;
   border-radius: 5rem;
   cursor: pointer;
+}
+
+.card-body p{
+  display: flex;
 }
 
 .container-img {
