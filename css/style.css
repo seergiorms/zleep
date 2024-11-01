@@ -2,16 +2,15 @@ main {
   display: grid;
   height: 150rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.05fr 0.3fr 0.3fr 0.15fr 0.15fr 0.1fr;
+  grid-template-rows: 0.05fr 0.3fr 0.3fr 0.15fr 0.15fr 0.15fr 0.1fr;
   grid-template-areas: 
     "header2 nav2 nav2" 
     "section2 section2 section2" 
     "aside2 section3 section3"
     "section4 section4 section4"
     "section5 section5 section5"
+    "section6 section6 section6"
     "footer2 footer2 footer2"; 
-   /* grid-template-areas: "footer2 footer2 footer2" "section2 section2 aside2" "header2 nav2 nav2"; */
-  /* haz otras distribuciones */
   background-color: #FFFFFF;
 }
 
@@ -71,6 +70,10 @@ nav {
 
 }
 
+.caja a:hover {
+  color: #226CE0;
+}
+
 ul li {
   list-style-type: none;
 }
@@ -88,6 +91,7 @@ ul li {
   grid-area: section3;
   padding: 2rem;
   color: #101c44;
+  flex-wrap: wrap;
 }
 
 #section3 h1{
@@ -135,9 +139,6 @@ ul li {
   cursor: pointer;
 }
 
-.card-body p{
-  display: flex;
-}
 
 .container-img {
   position: relative;
@@ -148,15 +149,6 @@ ul li {
   padding-top: 1rem;
 }
 
-.container-img .discount {
-  position: absolute;
-  left: 0;
-  background-color: #B8B8D1;
-  color: white;
-  padding: 2px 1.2rem;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-}
 
 .button-group {
   display: flex;
@@ -259,18 +251,10 @@ ul li {
 }
 
 .content-card-product .price {
+  color:#101c44;
   justify-self: end;
   font-size: 1.3rem;
   font-weight: 600;
-}
-
-.content-card-product .price span {
-  justify-self: end;
-  font-size: 1.1rem;
-  font-weight: 400;
-  text-decoration: line-through;
-  color: #777;
-  margin-left: 0.5rem;
 }
 
 /* fin productos */
@@ -318,6 +302,48 @@ aside h1 {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 3rem;
   padding: 5rem 5rem;
+}
+
+/* netart */
+
+.container {
+  background-color: #101c44;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: move 10s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+/* Configuración de tamaño y posición inicial para cada círculo */
+.circle:nth-child(1) { width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s; }
+.circle:nth-child(2) { width: 150px; height: 150px; top: 60%; left: 20%; animation-delay: 1s; }
+.circle:nth-child(3) { width: 200px; height: 200px; top: 30%; left: 70%; animation-delay: 2s; }
+.circle:nth-child(4) { width: 120px; height: 120px; top: 80%; left: 80%; animation-delay: 3s; }
+.circle:nth-child(5) { width: 180px; height: 180px; top: 10%; left: 50%; animation-delay: 4s; }
+.circle:nth-child(6) { width: 140px; height: 140px; top: 50%; left: 10%; animation-delay: 5s; }
+.circle:nth-child(7) { width: 130px; height: 130px; top: 40%; left: 90%; animation-delay: 6s; }
+.circle:nth-child(8) { width: 160px; height: 160px; top: 75%; left: 30%; animation-delay: 7s; }
+
+/* Animación para mover y cambiar color */
+@keyframes move {
+  0% {
+    transform: translate(0, 0) scale(1);
+    background-color: rgba(255, 0, 150, 0.5);
+  }
+  50% {
+    transform: translate(20vw, -20vh) scale(1.5);
+    background-color: rgba(0, 255, 150, 0.5);
+  }
+  100% {
+    transform: translate(-20vw, 20vh) scale(1);
+    background-color: rgba(0, 150, 255, 0.5);
+  }
 }
 
 footer {
@@ -416,31 +442,13 @@ footer {
 	margin-bottom: 25px;
 }
 
-.footer__social .footer__social__links a {
-	font-size: 18px;
-  color: #101c44;
-	height: 50px;
-	width: 50px;
-	background: #FFFFFF;
-	border-radius: 50%;
-	line-height: 50px;
-	text-align: center;
-	display: inline-block;
-}
-
-.footer__social .footer__social__links a:last-child {
-	margin-right: 0;
+.row{
+  max-height: 20em;
+  overflow-y: auto;
 }
 
 .footer__newslatter {
 	margin-bottom: 50px;
-}
-
-.footer__newslatter h4 {
-	font-size: 26px;
-	color: #FFFFFF;
-	font-weight: 700;
-	margin-bottom: 30px;
 }
 
 .footer__newslatter form {
@@ -505,4 +513,19 @@ footer {
 .footer__copyright__text a:hover {
   color: #101c44;
 
+}
+
+@media screen and (max-width: 600px) {
+  main{
+    grid-template-areas:
+    "header2 header2 header2"
+    "nav2 nav2 nav2" 
+    "section2 section2 section2" 
+    "aside2 aside2 aside2"
+    "section3 section3 section3"
+    "section4 section4 section4"
+    "section5 section5 section5"
+    "section6 section6 section6"
+    "footer2 footer2 footer2";
+  } 
 }
