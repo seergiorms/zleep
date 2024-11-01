@@ -74,6 +74,14 @@ ul li {
   list-style-type: none;
 }
 
+.carousel-inner{
+  max-height: 39rem;
+}
+
+.carousel-inner img{
+  object-fit: contain;
+}
+
 #section3{
   grid-area: section3;
   padding: 2rem;
