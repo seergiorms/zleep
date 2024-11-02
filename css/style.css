@@ -14,6 +14,8 @@ main {
   background-color: #FFFFFF;
 }
 
+/* inici header */
+
 header {
   grid-area: header2;
 }
@@ -21,8 +23,6 @@ header {
 #logo{
 	max-width: 70%;
 }
-
-
 
 * {
   margin: 0;
@@ -77,6 +77,8 @@ ul li {
   list-style-type: none;
 }
 
+/* slider de fotos */
+
 .carousel-inner{
   max-height: 39rem;
   display: flex;
@@ -85,6 +87,8 @@ ul li {
 .carousel-item{
   display: flex;
 }
+
+/* about us */
 
 #section3{
   grid-area: section3;
@@ -115,8 +119,8 @@ ul li {
   display: flex;
 }
 
+/* productos */
 
-/*------------------------ productos -----------------------*/
 .heading-2 {
   display: flex;
   justify-content: center;
@@ -138,7 +142,6 @@ ul li {
   border-radius: 5rem;
   cursor: pointer;
 }
-
 
 .container-img {
   position: relative;
@@ -220,7 +223,6 @@ ul li {
   cursor: pointer;
 }
 
-
 .content-card-product h2:hover {
   color: #226CE0;
 }
@@ -258,7 +260,7 @@ ul li {
   font-weight: 600;
 }
 
-/* fin productos */
+/* reviews */
 
 #section2{
   grid-area: section2;
@@ -305,13 +307,13 @@ aside h1 {
   gap: 3rem;
 }
 
+/* footer */
+
 footer {
   grid-area: footer2;
   background: #101c44;
   color: white;
   grid-column: span 3;
-  /*ocupa 2  columnas desde cualquier sitio que empieces */
-  /* también 1/3 */
 }
 
 .footer {
@@ -374,8 +376,6 @@ footer {
 	position: relative;
 	margin-bottom: 50px;
 }
-
-
 
 .footer__social h1 {
 	color: #ffffff;
@@ -459,7 +459,6 @@ footer {
 
 }
 
-
 /* netart */
 
 .container {
@@ -484,7 +483,8 @@ footer {
   opacity: 0.7;
 }
 
-/* Configuración de tamaño y posición inicial para cada círculo */
+/* configuració de tamany i posició inicial per a cada cercle */
+
 .circle:nth-child(1) { width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s; }
 .circle:nth-child(2) { width: 150px; height: 150px; top: 60%; left: 20%; animation-delay: 1s; }
 .circle:nth-child(3) { width: 200px; height: 200px; top: 30%; left: 70%; animation-delay: 2s; }
@@ -494,7 +494,8 @@ footer {
 .circle:nth-child(7) { width: 130px; height: 130px; top: 40%; left: 90%; animation-delay: 6s; }
 .circle:nth-child(8) { width: 160px; height: 160px; top: 75%; left: 30%; animation-delay: 7s; }
 
-/* Animación para mover y cambiar color */
+/* animació per a moure i canviar el color */
+
 @keyframes move {
   0% {
     transform: translate(0, 0) scale(1);
