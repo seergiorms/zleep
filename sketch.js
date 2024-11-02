@@ -19,11 +19,11 @@ let currentFrame = 0;
 
 //per poder fer que les imatges no es moguin amb el mouse, he hagut de crear la llista "formes", on s'afegiràn els loadImage i la imatge que surti de manera aleatòria (a la funció corresponent dins el codi).
 function preload() {
-  poster = loadImage("REDPSYCHO.png");
-  sang = ["sangre0.png", "sangre1.png", "sangre2.png"];
+  poster = loadImage("images/REDPSYCHO.png");
+  sang = ["images/sangre0.png", "images/sangre1.png", "images/sangre2.png"];
   formes = [];
   font = loadFont("LTPerfume-2.ttf");
-  scream = loadImage("christianBale.png");
+  scream = loadImage("images/christianBale.png");
 }
 
 //se crea el canvas i he afegit que el text es dibuixi centrat, que els angles estiguin en graus en comptes de radians i que la forma de dibuixar una ellipse (arcs) sigui amb graus i no amb radians.
