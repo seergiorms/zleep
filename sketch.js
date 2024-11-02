@@ -28,7 +28,7 @@ function preload() {
 
 //se crea el canvas i he afegit que el text es dibuixi centrat, que els angles estiguin en graus en comptes de radians i que la forma de dibuixar una ellipse (arcs) sigui amb graus i no amb radians.
 function setup() {
-  createCanvas(720, 1280);
+  createCanvas(30, 30);
   angleMode(DEGREES);
   ellipseMode(RADIUS);
   textAlign(CENTER);
@@ -225,26 +225,3 @@ function textos() {
   
   text("Killer Looks.", width / 2, 1160);
 }
-
-  function generateShape(event) {
-    const svg = document.querySelector("svg");
-    const shapes = ["circle", "rect", "polygon"];
-    const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FF9A33"];
-    const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
-    const color = colors[Math.floor(Math.random() * colors.length)];
-
-    let shape;
-    switch (shapeType) {
-      case "circle":
-        shape = `<circle cx="${event.clientX}" cy="${event.clientY}" r="${Math.random() * 50 + 10}" fill="${color}" />`;
-        break;
-      case "rect":
-        shape = `<rect x="${event.clientX}" y="${event.clientY}" width="${Math.random() * 50 + 20}" height="${Math.random() * 50 + 20}" fill="${color}" />`;
-        break;
-      case "polygon":
-        const size = Math.random() * 50 + 20;
-        shape = `<polygon points="${event.clientX},${event.clientY - size} ${event.clientX - size},${event.clientY + size} ${event.clientX + size},${event.clientY + size}" fill="${color}" />`;
-        break;
-    }
-    svg.innerHTML += shape;
-  }
